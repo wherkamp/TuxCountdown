@@ -19,7 +19,9 @@
     <br>
     <h2 id="countdown"></h2>
     <br>
-    <input type="text" value="{url}" id="share" onclick="copy();">
+    <span class="d-inline-block" tabindex="0" data-toggle="hover" id="tooltip" title="Click to Copy">
+        <input  class="form-control" type="text" value="{url}" id="share" onclick="copy();">
+    </span>
     <p id="date-time">Time {date-time}</p>
 </main>
 <style>
@@ -34,6 +36,7 @@
             width: initial;
         }
     }
+
 </style>
 <script>
     // Set the date we're counting down to
@@ -66,6 +69,8 @@
     }, 1000);
 </script>
 <script>
+    $('#tooltip').tooltip()
+
     function copy() {
         /* Get the text field */
         var copyText = document.getElementById("share");
@@ -76,8 +81,9 @@
         /* Copy the text inside the text field */
         document.execCommand("Copy");
 
-        /* Alert the copied text */
-        alert("Copied the text: " + copyText.value);
+        var tooltip = document.getElementById('tooltip')
+        tooltip.title='You have copied the link'
+
     }
 </script>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
