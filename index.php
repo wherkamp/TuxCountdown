@@ -13,7 +13,7 @@ if (isset($_POST['submit'])) {
         $prepared->bind_param("sssss", $name, $description, $date, $time, $done);
         $name = $_POST['name'];
         $description = $_POST['description'];
-        $date = $_POST['date'];
+        $date = str_replace("-", "/", $_POST['date']);
         $time = $_POST['time'];
         $done = $_POST['over-message'];
         $prepared->execute();
