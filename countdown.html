@@ -18,9 +18,9 @@
     <article>{description}</article>
     <br>
     <h2 id="countdown"></h2>
-<br>
+    <br>
     <input type="text" value="{url}" id="share" onclick="copy();">
-    <p id="date-time">Time  {date-time}</p>
+    <p id="date-time">Time {date-time}</p>
 </main>
 <style>
     main {
@@ -28,18 +28,16 @@
         margin: 0 auto;
         text-align: center;
     }
+
     @media only screen and (max-width: 600px) {
         main {
             width: initial;
-        }
-        iframe{
-            width: 250px;
         }
     }
 </style>
 <script>
     // Set the date we're counting down to
-    var countDownDate = new Date("{date-time}").getTime();
+    var countDownDate = Date.parse("{date-time}");
 
     // Update the count down every 1 second
     var x = setInterval(function () {
@@ -91,5 +89,6 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"
         integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
         crossorigin="anonymous"></script>
+<script src="{root}/assets/js/date.js"></script>
 </body>
 </html>

@@ -5,3 +5,4 @@ RewriteCond %{SCRIPT_FILENAME} !-f
 RewriteRule ^countdown/(.*)/?$ index.php?countdown=$1
 RewriteRule ^countdown/(.*)/(.*)/?$ index.php?countdown=$1&other=$2l
 RewriteRule ^error/(.*)/?$ index.php?error=$1
+ErrorDocument 404 /404.php

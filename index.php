@@ -41,9 +41,14 @@ if (isset($_POST['submit'])) {
                     $page = str_replace("{date-time}", $datetime, $page);
                     $page = str_replace("{done-message}", $row['done'], $page);
                     $page = str_replace("{url}", $url, $page);
+                    $page = str_replace("{root}", ROOT, $page);
                     echo $page;
                 }
+            } else {
+                include '404.php';
             }
+        } else {
+            include '404.php';
         }
     } else {
         $error = "";
