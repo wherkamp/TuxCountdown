@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="Wyatt Herkamp">
+    <meta property="og:title" content="Awesome Countdown creator by KingTux"/>
+    <title>Create a Countdown</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
+          integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+</head>
+<body>
+<main>
+    {error}
+    <h1>Create a Countdown</h1>
+    <form method="post">
+
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" name="name" id="name" aria-describedby="name-help"
+                   placeholder="Destiny 2 Warmind">
+            <small id="name-help" class="form-text text-muted">The name of your countdown</small>
+        </div>
+        <div class="form-group">
+            <label for="description">Description</label>
+                <textarea class="form-control" name="description" id="description" rows="3"></textarea>
+            <small id="description-help" class="form-text text-muted">The description of countdown</small>
+        </div>
+        <div class="form-group">
+            <label for="date">date</label>
+            <input type="date"
+                   class="form-control" name="date" id="date" aria-describedby="date-help" placeholder="">
+            <small id="date-help" class="form-text text-muted">The date</small>
+        </div>
+        <div class="form-group">
+            <label for="time">time</label>
+            <input type="time"
+                   class="form-control" name="time" id="time" aria-describedby="time-help" placeholder="">
+            <small id="time-help" class="form-text text-muted">The time</small>
+        </div>
+        <div class="form-group">
+            <label for="over-message">Message when over</label>
+            <input type="text"
+                   class="form-control" name="over-message" id="over-message" aria-describedby="over-message-help" placeholder="It is Here!">
+            <small id="over-message-help" class="form-text text-muted">The time</small>
+        </div>
+        <!-- Parent element of pin input must have id of no-pin -->
+        <div class="form-group" id="no-pin">
+            <label for="pin">The Pin</label>
+            <input type="text" class="form-control" name="pin" id="pin" value="0" aria-describedby="pin-help" placeholder="pin">
+            <small id="pin-help" class="form-text text-muted">If pin is disabled leave value to zero</small>
+        </div>
+        <!--  For submit button name="submit" has to be present -->
+        <button type="submit" class="btn btn-primary" name="submit">Submit</button>
+    </form>
+</main>
+{hide}
+<style>
+    main {
+        width: 65%;
+        margin: 0 auto;
+        text-align: center;
+    }
+</style>
+<script>
+
+</script>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"
+        integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"
+        integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
+        crossorigin="anonymous"></script>
+</body>
+</html>

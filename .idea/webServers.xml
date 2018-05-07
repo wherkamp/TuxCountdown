@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="7bb87409-0e7b-452e-b49e-b309f388e32f" name="countdown.kingtux.me" url="http://countdown.kingtux.me">
+        <fileTransfer host="countdown.kingtux.me" port="22" rootFolder="/var/www/countdown.kingtux.me" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

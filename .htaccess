@@ -1,0 +1,7 @@
+RewriteEngine On
+RewriteCond %{SCRIPT_FILENAME} !-d
+RewriteCond %{SCRIPT_FILENAME} !-f
+#Rule Rewrites for user
+RewriteRule ^countdown/(.*)/?$ index.php?countdown=$1
+RewriteRule ^countdown/(.*)/(.*)/?$ index.php?countdown=$1&other=$2l
+RewriteRule ^error/(.*)/?$ index.php?error=$1
